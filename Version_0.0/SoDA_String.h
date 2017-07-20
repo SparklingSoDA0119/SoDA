@@ -14,24 +14,24 @@ namespace SoDA {
 	class String {
 	public :
 		String() { makeEmpty(); }
-		String(const char* s) { operator=(s) }
+		String(const char* s) { operator=(s); }
 
 	private :
 		char _buffer[BUFFER_SIZE];
 
 	public :
-		uInt length()  const { return static_cast<uInt>(strlen(_buffer)); }
-		bool isEmpty() const { return ('\0' == _buffer[0]; }
+		usInt length()  const { return static_cast<usInt>(strlen(_buffer)); }
+		bool isEmpty() const { return ('\0' == _buffer[0]); }
 		
-		bool operator==(const char*)				  const { return !strcmp(_buffer, s); }
+		bool operator==(const char* s)				  const { return !strcmp(_buffer, s); }
 		bool operator==(const String<BUFFER_SIZE>& s) const { return operator==(s._buffer); }
-		bool operator!=(const char*)				  const { return !operator==(s); }
-		bool operator!=(cnost String<BUFFER_SIZE>& s) const { return !operator==(s); }
+		bool operator!=(const char* s)				  const { return !operator==(s); }
+		bool operator!=(const String<BUFFER_SIZE>& s) const { return !operator==(s); }
 
 		const char* operator= (const char* s);
 		const char* operator= (const String<BUFFER_SIZE>& s) { return operator=(s._buffer); }
 		const char* operator+=(const char* s)				 { return append(s); }
-		const char* operator+=(cnost String<BUFFER_SIZE>& s) { return operator+=(s._buffer); }
+		const char* operator+=(const String<BUFFER_SIZE>& s) { return operator+=(s._buffer); }
 
 		const char* append(const char* s);
 		const char* append(const String<BUFFER_SIZE>& s) { return operator+=(s._buffer); }
@@ -69,7 +69,7 @@ namespace SoDA {
 	}
 
 	template<sInt BUFFER_SIZE>
-	const char* String<BUFFER_SIZE>::prrintf(const char* fmt, ...)
+	const char* String<BUFFER_SIZE>::printf(const char* fmt, ...)
 	{
 		va_list vargs;
 		va_start(vargs, fmt);
