@@ -6,12 +6,12 @@
 #endif
 
 namespace SoDA {
-    typedef   signed char  schar;
-    typedef unsigned char  uschar;
-    typedef   signed short sshort;
-    typedef unsigned short usshort;
-    typedef   signed int   sint;
-    typedef unsigned int   usint;
+    typedef   signed char  sChar;
+    typedef unsigned char  usChar;
+    typedef   signed short sShort;
+    typedef unsigned short usShort;
+    typedef   signed int   sInt;
+    typedef unsigned int   usInt;
 }       // namespace SoDA
 
 #endif // _SODA_TYPE_H
