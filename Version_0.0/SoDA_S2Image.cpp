@@ -1,9 +1,9 @@
-#include "G:\ProjectHS\SoDA\Version_0.0\SoDA_Image.h"
+#include <SoDA_S2Type.h>
 
 using namespace SoDA;
 using namespace std;
 
-Image::Image()
+S2Image::S2Image()
 {
 	_usS_Row = 0;
 	_usS_Col = 0;
@@ -11,7 +11,7 @@ Image::Image()
 	_usS_Type = UNDEFINED;
 }
 
-void Image::setImageInfo(usShort row, usShort col, usShort type)
+void S2Image::setImageInfo(usShort row, usShort col, usShort type)
 {
 	_usS_Row  = row;
 	_usS_Col  = col;

@@ -1,14 +1,14 @@
 #ifndef _SODA_IMAGE_H
 #define _SODA_IMAGE_H
 
-#include "G:\ProjectHS\SoDA\Version_0.0\SoDA_Type.h"
+#include <SoDA_S2Type.h>
 
 namespace SoDA {
-class Image {
+class S2Image {
 	
 public :
-	Image();
-	virtual ~Image() {};
+	S2Image();
+	virtual ~S2Image() {};
 
 public :
 	enum { RAW = 0,

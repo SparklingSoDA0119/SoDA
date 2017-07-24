@@ -43,11 +43,11 @@ protected :
 protected :
     virtual bool invoke(const S2Invocation& invocation, S2MemoryStream* result) { return true; }
     
-    void invokeAndRespond(usInt invocationId, const S2Invocation& invocation,
+    void invokeAndRespond(uint32 invocationId, const S2Invocation& invocation,
                           S2MemoryStream* result, S2Port* responsePort);
 
 public :
-    virtual void performInvocation(usInt invocationId, 
+    virtual void performInvocation(uint32 invocationId, 
                                    const S2Invocation& invocation,
                                    S2Port* responsePort);
 
