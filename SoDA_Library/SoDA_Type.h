@@ -5,6 +5,8 @@
 	#include <ctime>
 #endif
 
+# pragma once
+
 namespace SoDA {
 	typedef   signed char  int8;
     typedef unsigned char  uint8;
@@ -23,6 +25,17 @@ namespace SoDA {
 
     typedef float  float32;
     typedef double float64;
-} // namespace SoDA
 
+#if defined(_WIN32)
+    typedef     __time32_t  time_t32;
+    typedef     __time64_t  time_t64;
+#else
+    typedef          int32  time_t32;
+    typedef          int64  time_t64;
+#endif
+
+    template<class T>
+    inline T absDiff(const T& a, const T& b) { return  (a < b) ? (b - a) : (a - b); }
+
+} // namespace SoDA
 #endif // _SODA_TYPE_H_
